@@ -284,6 +284,22 @@ define U-Boot/lubancat-2io-rk3568
     embedfire_lubancat-2io
 endef
 
+# RK3576 boards
+
+define U-Boot/rk3576/Default
+  BUILD_SUBTARGET:=armv8
+  DEPENDS:=+PACKAGE_u-boot-$(1):trusted-firmware-a-rk3576
+  ATF:=rk3576_bl31_v1.15.elf
+  TPL:=rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.09.bin
+endef
+
+define U-Boot/dshanpi-a1-rk3576
+  $(U-Boot/rk3576/Default)
+  NAME:=DshanPi-A1
+  BUILD_DEVICES:= \
+    dshanpi_dshanpi-a1
+endef
+
 # RK3588 boards
 
 define U-Boot/rk3588/Default
@@ -398,7 +414,8 @@ UBOOT_TARGETS := \
   lubancat-1n-rk3566 \
   lubancat-2-rk3568 \
   lubancat-2n-rk3568 \
-  lubancat-2io-rk3568
+  lubancat-2io-rk3568 \
+  dshanpi-a1-rk3576
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
