@@ -76,3 +76,11 @@ define Device/embedfire_lubancat-4
   DEVICE_PACKAGES := kmod-r8125 kmod-ata-ahci-dwc
 endef
 TARGET_DEVICES += embedfire_lubancat-4
+
+define Device/dshanpi_dshanpi-a1
+  DEVICE_VENDOR := DshanPi
+  DEVICE_MODEL := DshanPi-A1
+  SOC := rk3576
+  DEVICE_PACKAGES := kmod-r8169 -urngd
+endef
+TARGET_DEVICES += dshanpi_dshanpi-a1

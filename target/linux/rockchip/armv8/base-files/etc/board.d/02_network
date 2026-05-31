@@ -25,6 +25,7 @@ rockchip_setup_interfaces()
 	xunlong,orangepi-r1-plus-lts)
 		ucidef_set_interfaces_lan_wan 'eth1' 'eth0'
 		;;
+	100ask,dshanpi-a1|\
 	friendlyarm,nanopc-t6|\
 	friendlyarm,nanopi-r5c|\
 	radxa,e25|\
@@ -66,6 +67,7 @@ rockchip_setup_macs()
 	embedfire,lubancat2|\
 	embedfire,lubancat2n|\
 	embedfire,lubancat2io|\
+	100ask,dshanpi-a1|\
 	friendlyarm,nanopi-r3s|\
 	friendlyarm,nanopi-r5c|\
 	friendlyarm,nanopi-r6c|\
