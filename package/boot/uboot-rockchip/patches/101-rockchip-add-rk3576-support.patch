@@ -9,7 +9,8 @@ Subject: [PATCH] rockchip: add RK3576 SoC support to Makefiles and Kconfig
  drivers/clk/rockchip/Makefile     |  1 +
  drivers/pinctrl/rockchip/Makefile |  1 +
  drivers/ram/rockchip/Makefile     |  1 +
- 5 files changed, 54 insertions(+)
+ drivers/reset/Makefile            |  1 +
+ 6 files changed, 55 insertions(+)
 
 diff --git a/arch/arm/mach-rockchip/Makefile b/arch/arm/mach-rockchip/Makefile
 index c07bdaee4c..abcdef0001 100644
@@ -118,5 +119,17 @@ index 36dc0500da..abcdef0005 100644
  obj-$(CONFIG_ROCKCHIP_RK3588) += sdram_rk3588.o
  obj-$(CONFIG_ROCKCHIP_RV1126) += sdram_rv1126.o sdram_pctl_px30.o
  obj-$(CONFIG_ROCKCHIP_SDRAM_COMMON) += sdram_common.o
+diff --git a/drivers/reset/Makefile b/drivers/reset/Makefile
+index 1a2b3c4d5e..abcdef0006 100644
+--- a/drivers/reset/Makefile
++++ b/drivers/reset/Makefile
+@@ -14,6 +14,7 @@ obj-$(CONFIG_RESET_ROCKCHIP) += reset-rockchip.o
+ 
+ obj-$(CONFIG_ROCKCHIP_RK3399) += rst-rk3399.o
+ obj-$(CONFIG_ROCKCHIP_RK3568) += rst-rk3568.o
++obj-$(CONFIG_ROCKCHIP_RK3576) += rst-rk3576.o
+ obj-$(CONFIG_ROCKCHIP_RK3588) += rst-rk3588.o
+ obj-$(CONFIG_ROCKCHIP_RV1126) += rst-rv1126.o
+ 
 -- 
 2.34.1
